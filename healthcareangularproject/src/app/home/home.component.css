@@ -1,0 +1,51 @@
+button{
+    margin: 0px 10px;
+}
+
+input{
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.container.search-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: auto;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 50px;
+    background: #2A404B;  
+    background: -webkit-linear-gradient(to right, #2A404B, #2A404B);  
+    background: linear-gradient(to right, #2A404B, #2A404B); 
+
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+img{
+    transition: transform 0.2s ease-in;
+    margin-bottom: 15px;
+}
+
+img:hover{
+    transform: scale(0.9);
+}
+
+.card{
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+}
+
+.added{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}

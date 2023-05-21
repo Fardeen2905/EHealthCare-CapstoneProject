@@ -1,0 +1,33 @@
+button{
+    margin: 0px 3px;
+}
+
+.card{
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+}
+
+img{
+    transition: transform 0.2s ease-in;
+}
+
+img:hover{
+    transform: scale(0.9);
+}
+
+.medicine-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+  
+
+  .added{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}

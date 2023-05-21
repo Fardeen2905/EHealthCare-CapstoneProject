@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card">
+        <img class="card-img-top" src="https://med.gov.bz/wp-content/uploads/2020/08/dummy-profile-pic.jpg">
+        <div class="card-body">
+            <h3>{{profileAccountDetails.name}}</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td>Username</td>
+                        <td>{{profileAccountDetails.username | uppercase}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{profileAccountDetails.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>{{profileAccountDetails.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td>{{profileAccountDetails.role | uppercase}}</td>
+                    </tr>
+                </tbody>
+            </table>    
+        </div>
+    </div>
+</div>
+    

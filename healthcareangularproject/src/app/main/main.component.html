@@ -1,0 +1,65 @@
+<div class="container">
+    <header class="p-3 text-bg-success">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a routerLink="landingpage" class="nav-link">
+              <img src="https://img.icons8.com/ios/1x/doctors-bag.png" width="50px"/>
+             
+              <h3>E-Health Care</h3></a>
+          </div>
+          <ul  *ngIf="isLogin() == true" class="nav col-12 col-lg-auto me-lg-auto mb-3 justify-content-center mb-md-0">
+            <li>
+              <a routerLink="home" class="nav-link px-4 text-white">HOME</a>
+            </li>
+            <li>
+              <a routerLink="medicines" class="nav-link px-4 text-white">MEDICINE</a>
+            </li>
+  
+            <li *ngIf="getUserName() == true"><a routerLink="medicine-add" class="nav-link px-4 text-white">ADD</a></li>
+  
+            <li *ngIf="getUserName() == true"><a routerLink="medicine-list" class="nav-link px-4 text-white">LIST</a></li>
+            
+            
+            <li *ngIf="isAdmin() != true">
+              <a routerLink="cart" type="button" class="btn position-relative cart-icon">
+                <img width="30px" src="https://img.icons8.com/?size=1x&id=K8tyT81GcfvX&format=png"/>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{cartLength}}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </a>  
+            </li>
+            </ul>
+  
+            <div *ngIf="isLogin() != true" class="col-md-3 entry text-end">
+              <button type="button" routerLink="register" class="btn btn-outline-light me-2">REGISTER</button>
+              <button routerLink="login" type="button" class="btn btn-outline-light me-2">LOGIN</button>
+            </div>
+  
+            <div *ngIf="isLogin() == true" class="col-md-3 entry account text-end">
+  
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{accountName | uppercase}}
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a routerLink="profile" class="dropdown-item">Profile</a></li>
+                  <!-- <li><a class="dropdown-item">Track Order</a></li>
+                  <li><a class="dropdown-item">Settings</a></li> -->
+                  <li><a (click)="logout()" class="dropdown-item btn bg-danger text-white" href="#">Logout</a></li>
+                </ul>
+              </div>
+              </div>
+  
+  
+         
+        </div>
+      </div>
+    </header>
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

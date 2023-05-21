@@ -1,0 +1,12 @@
+{
+  "/purchase/create" : "/purchase",
+  "/purchase/list" : "/purchase",
+
+  "/account/create" : "/account",
+  "/account/get/:id" : "/account/:id",
+  "/account/list" : "/account",
+
+  "/medicines/list" : "/medicines",
+  "/medicines/get/:medicine_id": "/medicines/:medicine_id"
+
+}

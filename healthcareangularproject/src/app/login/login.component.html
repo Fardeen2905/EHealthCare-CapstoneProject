@@ -1,0 +1,21 @@
+<div class="container">
+    <form>
+      <h3 style="text-align:center;"><span style="color:lightslategrey">LOGIN FORM</span></h3>
+  
+        <img src="https://img.icons8.com/?size=512&id=108571&format=png" width="50px"/>
+        <br/>
+        <br/>
+        
+  
+      <div class="mb-3">
+        <input type="text" class="form-control" name="username" [(ngModel)]="userObj.username" placeholder="Username">
+        
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" name="password" [(ngModel)]="userObj.password" placeholder="Password">
+      
+      </div>
+  
+      <button (click)="login()" type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>

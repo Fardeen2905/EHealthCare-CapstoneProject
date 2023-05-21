@@ -1,0 +1,41 @@
+<h3 class="title">All Medicines</h3>
+
+<div class="album py-2 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div *ngFor="let m of medicines" class="col">
+                <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="250" src={{m.medicine_img}}  role="img" aria-label="Placeholder: Thumbnail" >
+                <div class="card-body">
+                    
+                    <h3>{{m.medicine_name | uppercase}}</h3>
+                    <p>{{m.medicine_price | currency : "INR"}}</p>
+                    <p>Category : {{m.category_name | uppercase}}</p>
+                    <p>Seller : {{m.medicine_seller | uppercase}}</p>
+                    <p class="card-text">{{m.medicine_details}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div *ngIf="isAdmin() != true && m.medicine_quantity > 0" class="btn-group">
+                        <!-- <button class="btn btn-light" (click)="viewDetails(m)">View</button>
+                        <button class="btn btn-warning" (click)="addToCart(m)">Add To Cart</button> -->
+                        <button type="button" class="btn btn-info" (click)="viewDetails(m)">View</button>
+                        <button type="button" class="btn btn-secondary" (click)="addToCart(m)">Add To Cart</button>
+                    </div>
+                    <div *ngIf="m.medicine_quantity > 0">
+                        <small style="color : green">Available : {{m.medicine_quantity}}</small>
+                    </div>
+                    <div *ngIf="m.medicine_quantity == 0">
+                        <small style="color : red">Not Available</small>
+                    </div>
+                    
+                    </div>
+                    <br/>
+                    <div *ngIf="m.medicine_added === true">
+                        <p class="added">Item Added to the Cart</p>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

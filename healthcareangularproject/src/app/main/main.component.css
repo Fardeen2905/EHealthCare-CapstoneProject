@@ -1,0 +1,21 @@
+h3 {
+    color: rgb(200, 232, 126);
+  }
+
+a {
+    font-size: large;
+  }
+
+  .cart-icon{
+    position: relative;
+    left: 130px;
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+}
+
+.nav-link h3{
+  margin-left: 10px;
+}

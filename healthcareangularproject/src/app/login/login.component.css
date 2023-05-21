@@ -1,0 +1,11 @@
+.container{
+    background-color:lightgreen;
+    width: 600px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .btn{
+    text-align:center;
+  }
